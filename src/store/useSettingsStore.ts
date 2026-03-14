@@ -27,7 +27,7 @@ export const useSettingsStore = create<ISettingsState>((set) => ({
 
   randomizeAll: () => set({
     seed: Math.floor(Math.random() * 99999),
-    variant: NOISE_VARIANTS[NOISE_VARIANTS.length * Math.random()]
+    variant: NOISE_VARIANTS[Math.floor(NOISE_VARIANTS.length * Math.random())]
   }),
 
   generate: () =>
