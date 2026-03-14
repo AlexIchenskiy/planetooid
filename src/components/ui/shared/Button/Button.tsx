@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import './Button.scss';
+import './button.scss';
 
 type ButtonVariant = 'primary' | 'ghost' | 'outline';
 type ButtonSize = 'sm' | 'md';

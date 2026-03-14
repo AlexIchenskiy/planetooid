@@ -1,4 +1,4 @@
-import './Input.scss';
+import './input.scss';
 
 type InputType = 'text' | 'number';
 
