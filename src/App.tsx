@@ -7,10 +7,10 @@ import './styles/layout.scss';
 
 function App() {
   return (
-    <div className="app-layout">
+    <div className='app-layout'>
       <Header />
 
-      <main className="main-content">
+      <main className='main-content'>
         <DesktopSidebar />
         <CanvasContainer />
       </main>

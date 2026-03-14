@@ -1,7 +1,7 @@
-import { createNoise3D, type NoiseFunction3D } from "simplex-noise";
+import { createNoise3D, type NoiseFunction3D } from 'simplex-noise';
 import alea from 'alea';
 
-export const NOISE_VARIANTS = ["fbm", "ridged", "terraced", "domainWarp"] as const;
+export const NOISE_VARIANTS = ['fbm', 'ridged', 'terraced', 'domainWarp'] as const;
 
 export type INoiseVariant = typeof NOISE_VARIANTS[number];
 
@@ -63,9 +63,9 @@ export const createNoiseFn = (
   const noise3D = createNoise3D(alea(options.seed ?? 42));
 
   switch (variant) {
-    case "fbm": return fbm(noise3D, octaves);
-    case "ridged": return ridged(noise3D, octaves);
-    case "terraced": return terraced(noise3D, steps, octaves);
-    case "domainWarp": return domainWarp(noise3D, warp, octaves);
+    case 'fbm': return fbm(noise3D, octaves);
+    case 'ridged': return ridged(noise3D, octaves);
+    case 'terraced': return terraced(noise3D, steps, octaves);
+    case 'domainWarp': return domainWarp(noise3D, warp, octaves);
   }
 };

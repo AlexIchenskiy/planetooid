@@ -56,5 +56,5 @@ export default function PlanetGeometry({
     return geo;
   }, [seed, scale, amplitude, resolution, generationTrigger]);
 
-  return <primitive object={geometry} attach="geometry" />;
+  return <primitive object={geometry} attach='geometry' />;
 }

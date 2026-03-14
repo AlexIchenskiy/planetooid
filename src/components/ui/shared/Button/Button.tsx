@@ -37,8 +37,8 @@ export default function Button({
       disabled={disabled}
       aria-label={ariaLabel}
     >
-      {icon && <span className="btn-icon">{icon}</span>}
-      <span className="btn-label">{children}</span>
+      {icon && <span className='btn-icon'>{icon}</span>}
+      <span className='btn-label'>{children}</span>
     </button>
   );
 }

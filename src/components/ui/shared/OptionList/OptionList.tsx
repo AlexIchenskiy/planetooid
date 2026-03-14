@@ -51,21 +51,21 @@ export default function OptionList<T extends string>({
   return (
     <div className='option-list-container'>
       {label && <h4 className='option-list-label fancy'>{label}</h4>}
-      <div className="option-list" role={multiple ? 'group' : 'radiogroup'}>
+      <div className='option-list' role={multiple ? 'group' : 'radiogroup'}>
         {options.map((opt) => (
           <button
             key={opt.value}
-            type="button"
+            type='button'
             role={multiple ? 'checkbox' : 'radio'}
             aria-checked={isSelected(opt.value)}
             className={`option-list-item ${isSelected(opt.value) ? 'option-list-item-selected' : ''}`}
             onClick={() => handleClick(opt.value)}
           >
-            <span className="option-list-indicator" aria-hidden="true" />
-            <span className="option-list-text">
-              <span className="option-list-label">{opt.label}</span>
+            <span className='option-list-indicator' aria-hidden='true' />
+            <span className='option-list-text'>
+              <span className='option-list-label'>{opt.label}</span>
               {opt.description && (
-                <span className="option-list-description">{opt.description}</span>
+                <span className='option-list-description'>{opt.description}</span>
               )}
             </span>
           </button>

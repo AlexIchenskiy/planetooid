@@ -26,7 +26,7 @@ export default function Input({
   return (
     <input
       id={id}
-      className="input"
+      className='input'
       type={type}
       value={value}
       min={min}

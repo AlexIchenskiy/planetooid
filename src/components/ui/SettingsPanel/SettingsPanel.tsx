@@ -18,23 +18,23 @@ export default function SettingsPanel() {
   const { seed, variant, setVariant, setSeed, randomizeSeed, generate } = useSettingsStore();
 
   return (
-    <div className="settings-panel">
-      <section className="settings-panel-section">
-        <div className="settings-panel-section-title">
+    <div className='settings-panel'>
+      <section className='settings-panel-section'>
+        <div className='settings-panel-section-title'>
           <Globe size={18} />
-          <h3 className="settings-panel-section-title-text fancy">World</h3>
+          <h3 className='settings-panel-section-title-text fancy'>World</h3>
         </div>
 
         <div className='settings-panel-form'>
           <Input
-            id="seed-input"
-            type="number"
+            id='seed-input'
+            type='number'
             value={seed}
             onChange={(v) => setSeed(v as number)}
             min={0}
             max={99999}
           />
-          <Button onClick={randomizeSeed} variant="outline" size="sm" icon={<Dices size={14} />} ariaLabel="Randomize seed">
+          <Button onClick={randomizeSeed} variant='outline' size='sm' icon={<Dices size={14} />} ariaLabel='Randomize seed'>
             Randomize
           </Button>
         </div>

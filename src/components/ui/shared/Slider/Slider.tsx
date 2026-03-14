@@ -22,11 +22,11 @@ export default function Slider({
   const percent = ((value - min) / (max - min)) * 100;
 
   return (
-    <div className="slider">
+    <div className='slider'>
       <input
         id={id}
-        className="slider-track"
-        type="range"
+        className='slider-track'
+        type='range'
         min={min}
         max={max}
         step={step}
@@ -35,7 +35,7 @@ export default function Slider({
         onChange={(e) => onChange(Number(e.target.value))}
         style={{ '--fill': `${percent}%` } as React.CSSProperties}
       />
-      <span className="slider-value">{value}</span>
+      <span className='slider-value'>{value}</span>
     </div>
   );
 }

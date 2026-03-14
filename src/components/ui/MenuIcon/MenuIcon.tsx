@@ -13,9 +13,9 @@ export default function MenuIcon({ open, onClick }: IMenuIconProps) {
       aria-label={open ? 'Close menu' : 'Open menu'}
       aria-expanded={open}
     >
-      <span className="menu-icon-bar menu-icon-bar-top" />
-      <span className="menu-icon-bar menu-icon-bar-mid" />
-      <span className="menu-icon-bar menu-icon-bar-bot" />
+      <span className='menu-icon-bar menu-icon-bar-top' />
+      <span className='menu-icon-bar menu-icon-bar-mid' />
+      <span className='menu-icon-bar menu-icon-bar-bot' />
     </button>
   );
 }

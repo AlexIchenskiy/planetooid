@@ -5,9 +5,9 @@ import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className='header'>
       <Logo />
-      <div className="header-actions">
+      <div className='header-actions'>
         <ThemeSwitcher />
       </div>
     </header>

@@ -51,7 +51,7 @@ export default function Stars({
     <points ref={ref} geometry={geometry}>
       <pointsMaterial
         size={size}
-        color="#ffffff"
+        color='#ffffff'
         transparent
         opacity={0.85}
         sizeAttenuation

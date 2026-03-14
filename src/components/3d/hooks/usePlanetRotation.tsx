@@ -1,6 +1,6 @@
-import { useRef, useEffect, type RefObject } from "react";
-import { useFrame } from "@react-three/fiber";
-import * as THREE from "three";
+import { useRef, useEffect, type RefObject } from 'react';
+import { useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
 
 const IDLE_AFTER_MS = 3000;
 const AUTO_SPEED = 0.0015;
@@ -63,18 +63,18 @@ export default function usePlanetRotation(containerRef: RefObject<HTMLElement | 
       inertia.current = delta;
     };
 
-    el.addEventListener("pointerdown", onPointerDown, { passive: false });
-    el.addEventListener("pointermove", onPointerMove, { passive: false });
-    el.addEventListener("pointerup", onPointerUp);
-    el.addEventListener("pointercancel", onPointerUp);
-    el.addEventListener("wheel", onWheel);
+    el.addEventListener('pointerdown', onPointerDown, { passive: false });
+    el.addEventListener('pointermove', onPointerMove, { passive: false });
+    el.addEventListener('pointerup', onPointerUp);
+    el.addEventListener('pointercancel', onPointerUp);
+    el.addEventListener('wheel', onWheel);
 
     return () => {
-      el.removeEventListener("pointerdown", onPointerDown);
-      el.removeEventListener("pointermove", onPointerMove);
-      el.removeEventListener("pointerup", onPointerUp);
-      el.removeEventListener("pointercancel", onPointerUp);
-      el.removeEventListener("wheel", onWheel);
+      el.removeEventListener('pointerdown', onPointerDown);
+      el.removeEventListener('pointermove', onPointerMove);
+      el.removeEventListener('pointerup', onPointerUp);
+      el.removeEventListener('pointercancel', onPointerUp);
+      el.removeEventListener('wheel', onWheel);
     };
   }, [containerRef]);
 
