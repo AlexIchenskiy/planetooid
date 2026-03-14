@@ -1,0 +1,114 @@
+$indicator-size: 0.875rem;
+
+.option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  &-label {
+    margin: 0;
+    color: var(--color-primary);
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    padding: 0.5rem 0.625rem;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+    color: var(--color-text);
+
+    &:hover {
+      background: var(--color-surface-raised);
+    }
+
+    &-selected {
+      border-color: var(--color-primary-dim);
+      background: var(--color-surface-raised);
+
+      .option-list-indicator {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      .option-list-label {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &-indicator {
+    flex-shrink: 0;
+    width: $indicator-size;
+    height: $indicator-size;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-primary-dim);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      border-radius: 50%;
+      background: var(--color-bg);
+      opacity: 0;
+    }
+  }
+
+  [role='checkbox'] & {
+    &-indicator {
+      border-radius: 3px;
+
+      &::after {
+        inset: 0;
+        border-radius: 2px;
+        background: transparent;
+        border: 1.5px solid var(--color-bg);
+        border-top: none;
+        border-right: none;
+        transform: rotate(-45deg) translate(1px, -1px);
+        width: 55%;
+        height: 35%;
+        top: 25%;
+        left: 20%;
+        inset: unset;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.option-list-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.option-list-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.option-list-description {
+  font-size: 0.6875rem;
+  color: var(--color-text-dim);
+  font-weight: 400;
+}
